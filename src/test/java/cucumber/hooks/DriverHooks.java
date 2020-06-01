@@ -1,14 +1,17 @@
 package cucumber.hooks;
 
+import decorator.CustomDriverDecorator;
 import driver.DriverSingleton;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class DriverHooks {
 
+    protected CustomDriverDecorator driver;
+
     @Before
     public void setupDriver(){
-        DriverSingleton.getDriver();
+        driver = DriverSingleton.getDriver();
     }
 
     @After

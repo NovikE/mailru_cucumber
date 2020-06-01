@@ -30,8 +30,8 @@ public class LoginPage extends AbstractPage{
     @FindBy(id = "PH_user-email")
     private WebElement userName;
 
-    public LoginPage(CustomDriverDecorator driver){
-        super (driver);
+    public LoginPage(){
+        super();
         driver.get(HOMEPAGE_URL);
         new WebDriverWait(driver, WAIT_TIMEOUTS_SECONDS)
                 .until(ExpectedConditions.visibilityOf(login));

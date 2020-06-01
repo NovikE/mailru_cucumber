@@ -33,8 +33,8 @@ public class DraftsFolderPage extends AbstractPage{
     @FindBy(xpath = "//*[@title='Закрыть']")
     WebElement closeAlertBtn;
 
-    public DraftsFolderPage(CustomDriverDecorator driver){
-        super(driver);
+    public DraftsFolderPage(){
+        super();
         new WebDriverWait(driver, WAIT_TIMEOUTS_SECONDS).
                 until(ExpectedConditions.visibilityOf(draftsBtn));
     }

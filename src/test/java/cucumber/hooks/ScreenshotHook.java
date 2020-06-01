@@ -12,7 +12,7 @@ public class ScreenshotHook {
     public void takeScreenshot(Scenario scenario){
 
         scenario.write(DriverSingleton.getDriver().getCurrentUrl());
-        byte[] screenshot = ((TakesScreenshot) DriverSingleton.getDriver()).getScreenshotAs(OutputType.BYTES);
+        byte[] screenshot = (DriverSingleton.getDriver()).getScreenshotAs(OutputType.BYTES);
         scenario.embed(screenshot, "image/png", scenario.getName());
 
     }

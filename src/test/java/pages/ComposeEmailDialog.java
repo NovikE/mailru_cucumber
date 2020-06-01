@@ -30,8 +30,8 @@ public class ComposeEmailDialog extends AbstractPage{
     @FindBy(xpath = "//*[@title='Закрыть']")
     private WebElement closeEmail;
 
-    public ComposeEmailDialog(CustomDriverDecorator driver) {
-        super (driver);
+    public ComposeEmailDialog() {
+        super ();
         new WebDriverWait(driver, WAIT_TIMEOUTS_SECONDS).
                until(ExpectedConditions.visibilityOf(composeBtn));
        }

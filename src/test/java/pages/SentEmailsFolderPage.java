@@ -35,8 +35,8 @@ public class SentEmailsFolderPage extends AbstractPage {
 
     public void logout(){exitBtn.click();}
 
-    public SentEmailsFolderPage(CustomDriverDecorator driver){
-        super(driver);
+    public SentEmailsFolderPage(){
+        super();
         new WebDriverWait(driver, WAIT_TIMEOUTS_SECONDS).
                 until(ExpectedConditions.visibilityOf(sentFolderBtn));}
 
